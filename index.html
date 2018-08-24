@@ -11,7 +11,15 @@
     <div class="resultat"> Test </div>
 
 <script>
-    
+    // je selectionne tous mes bouttons
+    const buttons = document.querySelectorAll("button");
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener("click", function() {
+            const joueur = buttons[i].innerHTML;
+            console.log(joueur);
+        });
+    }
 
 </script>
     </body>
