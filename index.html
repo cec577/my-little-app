@@ -8,7 +8,7 @@
     <button> Pierre </button>
     <button> Feuille </button>
     <button> Ciseaux </button>
-    <div class="resultat"> Test </div>
+    <div class="resultat"> </div>
 
 <script>
     // je selectionne tous mes bouttons
@@ -16,8 +16,28 @@
 
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function() {
+            // au clic cela affiche ce qu'il y a d'écrit dans les bouttons
             const joueur = buttons[i].innerHTML;
-            console.log(joueur);
+            const robot = buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
+            // console.log(`Joueur : ${joueur} VS Robot : ${robot}`);
+            let resultat = "";
+
+            if (joueur === robot) {
+                resultat = "Egalité";
+            }
+            else if ((joueur === "Pierre" && robot === "Ciseaux") || (joueur === "Feuille"
+        && robot === "Pierre") || (joueur === "Ciseaux" && robot === "Feuille")) {
+            resultat = "Gagné";
+        }
+        else {
+            resultat = "Perdu";
+        }
+
+        document.querySelector(".resultat").innerHTML = `Joueur : ${joueur} </br>
+        Robot: ${robot} </br>
+        ${resultat}`;
+
+
         });
     }
 
