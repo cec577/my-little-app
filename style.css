@@ -1,0 +1,30 @@
+body {
+  background: #FFB6C1;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 10px;
+}
+h2 {
+  text-align: center;
+}
+.button {
+}
+
+.align {
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+.joueur {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.robot {
+  text-align: center;
+  transition-delay: 5s;
+
+}

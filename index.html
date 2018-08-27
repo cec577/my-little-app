@@ -3,12 +3,28 @@
     <head>
         <meta charset="utf-8">
         <title> Do you want to play ?</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <!-- Import des fonts demandées -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ <!-- puis font-awesome -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- et on intègre notre feuille de style toujours en dernier -->
     </head>
 <body>
-    <button> Pierre </button>
-    <button> Feuille </button>
-    <button> Ciseaux </button>
-    <div class="resultat"> </div>
+    <h1>Do you want to play ? </h1>
+    <h2>Make your choice...</h2>
+    <div class="container">
+        <div class="align">
+
+    <button type="button" class="btn btn-outline-secondary button">Pierre</button>
+    <button type="button" class="btn btn-outline-secondary button">Feuille</button>
+    <button type="button" class="btn btn-outline-secondary button">Ciseaux</button>
+        </div>
+
+        <div id="resultat"> </div>
+    </div>
+
 
 <script>
     // je selectionne tous mes bouttons
@@ -22,6 +38,8 @@
             // console.log(`Joueur : ${joueur} VS Robot : ${robot}`);
             let resultat = "";
 
+
+
             if (joueur === robot) {
                 resultat = "Egalité";
             }
@@ -33,14 +51,15 @@
             resultat = "Perdu";
         }
 
-        document.querySelector(".resultat").innerHTML = `Joueur : ${joueur} </br>
-        Robot: ${robot} </br>
+        document.getElementById("resultat").innerHTML = `<div class="joueur"> Your choice : ${joueur} </br></div>
+        <div class="robot">Robot: ${robot} </br> </div>
         ${resultat}`;
 
 
         });
     }
-
 </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 </html>
